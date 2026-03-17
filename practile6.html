@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seminar Registration Form</title>
+</head>
+<body>
+
+<h2>Seminar Registration Form</h2>
+
+ <style>
+        body {
+            background-color: #99cccc; /* light blue */
+            font-family: Times New Roman;
+        }
+        </style>
+
+<form>
+
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        <label>Full Name:</label><br>
+        <input type="text" name="name"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email"><br><br>
+
+        <label>Phone:</label><br>
+        <input type="text" name="phone"><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Seminar Details</legend>
+
+        <label>Select Topic:</label><br>
+        <select name="topic">
+            <option>Web Development</option>
+            <option>Data Science</option>
+            <option>Artificial Intelligence</option>
+        </select><br><br>
+
+        <label>Mode of Attendance:</label><br>
+        <input type="radio" name="mode" value="online"> Online<br>
+        <input type="radio" name="mode" value="offline"> Offline<br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Additional Preferences</legend>
+
+        <label>Workshops Interested In:</label><br>
+        <input type="checkbox" name="workshop" value="html"> HTML<br>
+        <input type="checkbox" name="workshop" value="css"> CSS<br>
+        <input type="checkbox" name="workshop" value="js"> JavaScript<br><br>
+    </fieldset>
+
+    <input type="submit" value="Register">
+
+</form>
+
+</body>
+</html>
