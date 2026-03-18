@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jack Sparrow Tribute</title>
+    <link rel="stylesheet" href="tribute file.css">
+</head>
+<body>
+
+<!-- Waves -->
+<div class="wave"></div>
+<div class="wave wave2"></div>
+<!-- Pirate Ships -->
+<div class="ship ship1"></div>
+<div class="ship ship2"></div>
+
+<div class="card">
+    <h1>Captain Jack Sparrow</h1>
+    
+    <img src="https://images.seeklogo.com/logo-png/30/2/jack-sparrow-logo-png_seeklogo-308991.png" alt="Jack Sparrow">
+    <marquee>
+ <img src="https://p7.hiclipart.com/preview/496/702/390/brigantine-piracy-jack-sparrow-galleon-ship-ship.jpg" alt="SHIP">
+ </marquee>
+    <p class="quote">
+        <span class="typing"></span>
+    </p>
+
+    <p class="desc">
+        The legendary pirate of the Caribbean, known for his wit, charm,
+        and unpredictable adventures across the seas.
+    </p>
+
+    <ul>
+        <li>⚓ Master of clever escapes</li>
+        <li>⚓ Captain of the Black Pearl</li>
+        <li>⚓ Unmatched charisma</li>
+    </ul>
+
+    <button>Explore the Seas</button>
+
+    <footer>☠ Tribute to the Pirate Legend ☠</footer>
+</div>
+
+<script>
+const text = "Not all treasure is silver and gold, mate.";
+let i = 0;
+
+
+
+function typingEffect() {
+    if (i < text.length) {
+        document.querySelector(".typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typingEffect, 50);
+    }
+}
+
+typingEffect();
+</script>
+
+</body>
+</html>
