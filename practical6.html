@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iron Man Tribute</title>
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0b0c10;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        header {
+            background: linear-gradient(to right, #b31217, #e52d27);
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: gold;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        img {
+            width: 300px;
+            border-radius: 10px;
+            border: 3px solid gold;
+            margin: 20px 0;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.3em;
+            margin: 20px auto;
+            max-width: 600px;
+            color: #c5c6c7;
+        }
+
+        .bio {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #1f2833;
+            color: #c5c6c7;
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+      <marquee>
+        <h1>IRON MAN</h1>
+        </marquee>
+        <p>Genius. Billionaire. Playboy. Philanthropist.</p>
+    </header>
+
+    <div class="content">
+        <img src="data:image/jpeg;base64,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" alt="Iron Man">
+
+        <div class="quote">
+            "I am Iron Man."
+        </div>
+
+        <div class="bio">
+            <p>
+                Iron Man, also known as Tony Stark, is one of Marvel's most iconic superheroes.
+                Portrayed by Robert Downey Jr., the character became the heart of the Marvel Cinematic Universe.
+            </p>
+
+            <p>
+                With unmatched intelligence and innovation, Tony Stark built the Iron Man suit to save lives
+                and protect the world. His journey from a self-centered genius to a selfless hero inspired millions.
+            </p>
+
+            <p>
+                His ultimate sacrifice proved that heroes are defined not by their power, but by their choices.
+                Iron Man will forever remain a symbol of courage, brilliance, and redemption.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Tribute Page | Made with ❤️ for Iron Man fans</p>
+    </footer>
+
+</body>
+</html>
