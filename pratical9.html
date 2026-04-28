@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Font + Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  text-align: center;
+}
+
+/* Heading Animation */
+h1 {
+  margin-top: 20px;
+  animation: fade 1.5s ease-in-out;
+}
+
+/* Columns */
+.columns {
+  column-count: 3;
+  padding: 20px;
+}
+
+.columns p {
+  background: rgba(255,255,255,0.08);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Cards */
+.card {
+  display: inline-block;
+  margin: 10px;
+  padding: 15px;
+  width: 120px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+}
+
+/* Hover Transform */
+.card:hover {
+  transform: scale(1.1) translateY(-5px);
+  background: rgba(255,255,255,0.2);
+}
+
+.card i {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+/* Animation */
+@keyframes fade {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media(max-width: 600px) {
+  .columns {
+    column-count: 1;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<h1><i class="fas fa-rocket"></i> CSS3 Modern Page</h1>
+
+<div class="columns">
+  <p>CSS3 helps create modern UI.</p>
+  <p>Columns organize content.</p>
+  <p>Animations add life.</p>
+</div>
+
+<div>
+  <div class="card"><i class="fas fa-mobile-alt"></i><br>Responsive</div>
+  <div class="card"><i class="fas fa-bolt"></i><br>Fast</div>
+  <div class="card"><i class="fas fa-paint-brush"></i><br>Stylish</div>
+</div>
+
+</body>
+</html>
