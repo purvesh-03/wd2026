@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 APIs Demo</title>
+  <style>
+    #dragBox {
+      width: 100px;
+      height: 100px;
+      background: coral;
+      cursor: grab;
+    }
+    #dropArea {
+      width: 200px;
+      height: 200px;
+      border: 2px dashed #333;
+      margin-top: 20px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>1. Drag & Drop</h2>
+<div id="dragBox" draggable="true">Drag me</div>
+<div id="dropArea">Drop here</div>
+
+<h2>2. Geolocation</h2>
+<button onclick="getLocation()">Get Location</button>
+<p id="location"></p>
+
+<h2>3. Web Storage</h2>
+<input type="text" id="nameInput" placeholder="Enter your name">
+<button onclick="saveData()">Save</button>
+<button onclick="loadData()">Load</button>
+<p id="storedData"></p>
+
+<script>
+  // Drag & Drop
+  const dragBox = document.getElementById("dragBox");
+  const dropArea = document.getElementById("dropArea");
+
+  dragBox.addEventListener("dragstart", (e) => {
+    e.dataTransfer.setData("text", "Dragged!");
+  });
+
+  dropArea.addEventListener("dragover", (e) => {
+    e.preventDefault();
+  });
+
+  dropArea.addEventListener("drop", (e) => {
+    e.preventDefault();
+    dropArea.innerHTML = "Item Dropped!";
+  });
+
+  // Geolocation
+  function getLocation() {
+    const output = document.getElementById("location");
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((pos) => {
+        output.innerHTML = 
+          "Latitude: " + pos.coords.latitude + 
+          "<br>Longitude: " + pos.coords.longitude;
+      });
+    } else {
+      output.innerHTML = "Geolocation not supported.";
+    }
+  }
+
+  // Web Storage
+  function saveData() {
+    const name = document.getElementById("nameInput").value;
+    localStorage.setItem("username", name);
+    alert("Data saved!");
+  }
+
+  function loadData() {
+    const name = localStorage.getItem("username");
+    document.getElementById("storedData").innerHTML =
+      name ? "Stored Name: " + name : "No data found.";
+  }
+</script>
+
+</body>
+</html>
